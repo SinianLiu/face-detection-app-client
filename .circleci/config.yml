@@ -1,9 +1,20 @@
 version: 2
 jobs:
-  build:
+  first:
     docker:
       - image: circleci/node:10.15.3
     steps:
       - checkout
       - run: echo 'a test step'
-
+  second:
+    docker:
+      - image: circleci/node:10.15.3
+    steps:
+      - checkout
+      - run: echo 'double trouble'
+workflows:
+  version: 2
+  first_second:
+    jobs:
+      - first
+      - second
