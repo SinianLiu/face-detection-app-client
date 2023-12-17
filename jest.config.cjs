@@ -2,7 +2,9 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.tsx?$': ["ts-jest", {
+      tsconfig: './tsconfig.json'
+    }],
     '^.+\\.css$': '<rootDir>/cssTransform.cjs',
   },
   moduleNameMapper: {
@@ -11,9 +13,4 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
-  globals: {
-    'ts-jest': {
-      tsconfig: './tsconfig.json'
-    }
-  }
 };
