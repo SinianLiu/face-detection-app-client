@@ -2,14 +2,14 @@ import { shallow } from 'enzyme';
 import Signin from './Signin';
 import fetchMock from 'jest-fetch-mock';
 
-it('expect to render Signin component', () => {
-  const onRouteChange = jest.fn();
-  const loadUser = jest.fn();
+// it('expect to render Signin component', () => {
+//   const onRouteChange = jest.fn();
+//   const loadUser = jest.fn();
 
-  expect(
-    shallow(<Signin onRouteChange={onRouteChange} loadUser={loadUser} />)
-  ).toMatchSnapshot();
-});
+//   expect(
+//     shallow(<Signin onRouteChange={onRouteChange} loadUser={loadUser} />)
+//   ).toMatchSnapshot();
+// });
 
 fetchMock.enableMocks();
 

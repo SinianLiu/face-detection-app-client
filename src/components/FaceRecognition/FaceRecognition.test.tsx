@@ -1,4 +1,6 @@
 import { shallow } from 'enzyme';
+// mock the pic file
+jest.mock('./mosaic.png', () => 'test-file-stub');
 import FaceRecognition from './FaceRecognition';
 
 it('expect to render FaceRecognition component', () => {
