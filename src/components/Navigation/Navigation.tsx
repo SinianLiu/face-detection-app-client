@@ -6,11 +6,16 @@ const Navigation = ({
   onRouteChange,
   isSignedIn,
   toggleModel,
+  signOut,
 }: INavigationProps) => {
   if (isSignedIn) {
     return (
       <nav style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <ProfileIcon onRouteChange={onRouteChange} toggleModel={toggleModel} />
+        <ProfileIcon
+          onRouteChange={onRouteChange}
+          toggleModel={toggleModel}
+          signOut={signOut}
+        />
       </nav>
     );
   } else {

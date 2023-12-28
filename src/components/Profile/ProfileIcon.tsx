@@ -9,7 +9,11 @@ import {
 } from 'reactstrap';
 import Alien from './alien.png';
 
-const ProfileIcon = ({ onRouteChange, toggleModel }: IProfileIconProps) => {
+const ProfileIcon = ({
+  onRouteChange,
+  toggleModel,
+  signOut,
+}: IProfileIconProps) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
@@ -28,9 +32,7 @@ const ProfileIcon = ({ onRouteChange, toggleModel }: IProfileIconProps) => {
           className="b--transparent shadow-5"
           style={{ backgroundColor: 'rgba(255,255,255,0.5)' }}>
           <DropdownItem onClick={toggleModel}>View Profile</DropdownItem>
-          <DropdownItem onClick={() => onRouteChange(Route.Signout)}>
-            Sign Out
-          </DropdownItem>
+          <DropdownItem onClick={signOut}>Sign Out</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     </div>

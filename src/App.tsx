@@ -104,6 +104,13 @@ function App() {
     setIsProfileOpen(!isProfileOpen);
   };
 
+  const signOut = (): void => {
+    console.log('signOut function called');
+    window.sessionStorage.removeItem('token');
+    setImageUrl('');
+    onRouteChange(Route.Signout);
+  };
+
   useEffect(() => {
     const token = window.sessionStorage.getItem('token');
     if (token) {
@@ -146,6 +153,7 @@ function App() {
         onRouteChange={onRouteChange}
         isSignedIn={isSignedIn}
         toggleModel={toggleModel}
+        signOut={signOut}
       />
       {isProfileOpen && (
         <Model>
