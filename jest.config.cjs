@@ -2,7 +2,7 @@ module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.tsx?$': "ts-jest",
     '^.+\\.css$': '<rootDir>/cssTransform.cjs',
   },
   moduleNameMapper: {
@@ -13,7 +13,11 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   globals: {
     'ts-jest': {
-      tsconfig: './tsconfig.json'
-    }
-  }
+      tsconfig: './tsconfig.json',
+      // Set esModuleInterop to true
+      compilerOptions: {
+        esModuleInterop: true,
+      },
+    },
+  },
 };

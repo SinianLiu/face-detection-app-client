@@ -32,10 +32,12 @@ export interface INavigationProps extends IonRouteChange {
   isSignedIn: boolean;
   toggleModel: () => void;
   // isProfileOpen: boolean;
+  signOut: () => void;
 }
 
 export interface IProfileIconProps extends IonRouteChange {
   toggleModel: () => void;
+  signOut: () => void;
 }
 
 export interface IProfileProps {
