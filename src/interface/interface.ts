@@ -35,7 +35,7 @@ export interface INavigationProps extends IonRouteChange {
   signOut: () => void;
 }
 
-export interface IProfileIconProps extends IonRouteChange {
+export interface IProfileIconProps {
   toggleModel: () => void;
   signOut: () => void;
 }

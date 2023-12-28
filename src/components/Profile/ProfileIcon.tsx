@@ -1,5 +1,4 @@
 import { IProfileIconProps } from '../../interface/interface';
-import { Route } from '../../interface/interface';
 import { useState } from 'react';
 import {
   Dropdown,
@@ -9,11 +8,7 @@ import {
 } from 'reactstrap';
 import Alien from './alien.png';
 
-const ProfileIcon = ({
-  onRouteChange,
-  toggleModel,
-  signOut,
-}: IProfileIconProps) => {
+const ProfileIcon = ({ toggleModel, signOut }: IProfileIconProps) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
